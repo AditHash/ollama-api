@@ -16,8 +16,14 @@ This repository contains two Flask applications that utilize Langchain for natur
 
 2. Create and activate a virtual environment:
     ```bash
+    # create venv
     python -m venv venv
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    
+    # for linux only
+    source venv/bin/activate
+
+    # for windows only
+    venv\Scripts\activate
     ```
 
 3. Install the required packages:
