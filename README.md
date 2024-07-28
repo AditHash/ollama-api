@@ -1,48 +1,46 @@
-# ollama-demo
-Python APIs built with ollama models (llama3.1 &amp; llava)
+# Ollama API
 
-
-# Flask Applications with Langchain
-
-This repository contains two Flask applications that utilize Langchain for natural language processing. The first application handles text inputs, while the second application processes both text and image inputs.
+This repository contains two Flask applications that utilize Langchain for natural language processing. The first application handles text inputs (`llama3.1.py`), while the second application processes both text and image inputs (`llava.py`).
 
 ## Prerequisites
 
 - Python 3.7 or higher
-- Flask
-- PIL (Pillow)
-- Langchain
-- Langchain Ollama
 
 ## Installation
 
 1. Clone this repository:
     ```bash
     git clone <repository_url>
-    cd <repository_directory>
+    cd ollama-api
     ```
 
-2. Install the required packages:
+2. Create and activate a virtual environment:
     ```bash
-    pip install flask pillow langchain-core langchain-ollama
+    python -m venv venv
+    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+    ```
+
+3. Install the required packages:
+    ```bash
+    pip install -r requirements.txt
     ```
 
 ## Usage
 
-### Text Input Application
+### Text Input Application (`llama3.1.py`)
 
 This application processes text inputs and generates responses using the Langchain model with conversation memory.
 
 #### Running the Application
 
-1. Navigate to the directory containing `app_text.py`:
+1. Navigate to the directory containing `llama3.1.py`:
     ```bash
-    cd path/to/app_text
+    cd path/to/llama3.1
     ```
 
 2. Run the Flask application:
     ```bash
-    python app_text.py
+    python llama3.1.py
     ```
 
 3. The application will be available at `http://127.0.0.1:5000/chat`.
@@ -59,20 +57,20 @@ This application processes text inputs and generates responses using the Langcha
     }
     ```
 
-### Text and Image Input Application
+### Text and Image Input Application (`llava.py`)
 
 This application processes both text and image inputs, converts the image to a Base64 encoded string, and generates responses using the Langchain model with conversation memory.
 
 #### Running the Application
 
-1. Navigate to the directory containing `app_image.py`:
+1. Navigate to the directory containing `llava.py`:
     ```bash
-    cd path/to/app_image
+    cd path/to/llava
     ```
 
 2. Run the Flask application:
     ```bash
-    python app_image.py
+    python llava.py
     ```
 
 3. The application will be available at `http://127.0.0.1:5000/image-chat`.
@@ -92,5 +90,3 @@ This application processes both text and image inputs, converts the image to a B
         -F "user_input=What is the dollar based gross retention rate?"
     ```
 
-if __name__ == '__main__':
-    app.run(debug=True)
