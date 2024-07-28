@@ -10,7 +10,7 @@ This repository contains two Flask applications that utilize Langchain for natur
 
 1. Clone this repository:
     ```bash
-    git clone <repository_url>
+    git clone https://github.com/AditHash/ollama-api.git
     cd ollama-api
     ```
 
